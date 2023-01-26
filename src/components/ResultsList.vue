@@ -4,10 +4,13 @@ v-data-table(
   :headers="headers"
   disable-sort
   disable-pagination
+  hide-default-footer
   )
   template( #item.house="{ item }")
-    v-avatar
-      img( :src="item.house.path()" )
+        v-avatar
+          img( :src="item.house.path()" )
+  template( #item.user_id="{ item }" )
+   div( :class="$style.user" v-if="item.user" ) {{ item.user.label }}
   template( #item.score="{ item }" )
     div( :class="$style.scores" ) {{ item.score }}
   template( #item.landings="{ item }" )
@@ -23,6 +26,7 @@ v-data-table(
 import Vue from 'vue'
 
 import { Result } from '@/models/Result'
+import { User } from '@/models/User'
 
 export default Vue.extend({
   name: 'ResultsList',
@@ -39,6 +43,8 @@ export default Vue.extend({
         text: 'Дом',
         width: '12%',
         align: 'center'
+      }, {
+        value: 'user_id'
       }, {
         value: 'score',
         text: 'Очки',
@@ -66,7 +72,9 @@ export default Vue.extend({
     items () {
       return Result.query()
         .where('game_id', this.id)
+        .where('user_id', (value: string) => value !== User.VASSAL)
         .with('house')
+        .with('user')
         .orderBy('score', 'desc')
         .orderBy('landings', 'desc')
         .orderBy('supply', 'desc')
@@ -81,5 +89,9 @@ export default Vue.extend({
 .scores {
   font-size 28px
   font-weight 500
+}
+.user {
+  font-weight bold
+  font-size 1.25rem
 }
 </style>

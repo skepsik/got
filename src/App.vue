@@ -39,12 +39,15 @@ import Vue, { VueConstructor } from 'vue'
 
 import { houses } from '@/data/houses'
 import { games } from '@/data/games'
+import { gameTypes } from '@/data/gameTypes'
 
 import { House } from '@/models/House'
 import { Game } from '@/models/Game'
+import { GameType } from '@/models/GameType'
 
 import GamesList from './components/GamesList.vue'
 import HousesList from './components/HousesList.vue'
+import UsersList from './components/UsersList.vue'
 
 export default Vue.extend({
   name: 'App',
@@ -69,12 +72,16 @@ export default Vue.extend({
       if (name === 'Houses') {
         return HousesList
       }
+      if (name === 'Players') {
+        return UsersList
+      }
       return null
     }
   },
 
   created () {
     House.insert({ data: houses })
+    GameType.insert({ data: gameTypes })
     Game.insert({ data: games })
   }
 })

@@ -24,7 +24,13 @@ const routes: Array<RouteConfig> = [
   {
     path: '/players',
     name: 'Players',
-    component: () => import('../pages/PlayersPage.vue')
+    component: () => import('../pages/PlayersPage.vue'),
+    children: [{
+      path: ':id',
+      name: 'PlayerId',
+      props: true,
+      component: () => import('../pages/HouseIdPage.vue')
+    }]
   },
   {
     path: '/houses',

@@ -1,8 +1,10 @@
 <template lang="pug">
-v-list.grow
-  v-list-item(v-for="item in games" :key="item.id" link :to="{ name: 'GameId', params: { id: item.id } }")
-    v-list-item-title
-      date-view( :value="item.date" )
+.d-flex.flex-column.flex-grow-1
+  v-list.grow
+    v-list-item(v-for="item in games" :key="item.id" link :to="{ name: 'GameId', params: { id: item.id } }")
+      v-list-item-title {{ item.date() }}
+  v-divider
+  new-game-dialog
 </template>
 
 <script lang="ts">
@@ -10,23 +12,24 @@ import Vue from 'vue'
 
 import { Game } from '@/models/Game'
 
-import DateView from './DateView.vue'
+import NewGameDialog from './NewGameDialog.vue'
 
 export default Vue.extend({
   name: 'GamesList',
   components: {
-    DateView
+    NewGameDialog
   },
   data: () => ({
-    items: [
-      { title: 'Партии', icon: 'mdi-view-dashboard', route: { name: 'Games' } },
-      { title: 'Игроки', icon: 'mdi-account-circle-outline', route: { name: 'Players' } },
-      { title: 'Дома', icon: 'mdi-castle', route: { name: 'Houses' } }
-    ]
+
   }),
   computed: {
     games () {
-      return Game.all()
+      return Game.query().orderBy('date').get()
+    }
+  },
+  methods: {
+    onSave () {
+      //
     }
   }
 })
