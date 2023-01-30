@@ -1,12 +1,24 @@
 <template lang="pug">
-router-view
+AppLayout
+  template( #sidebar )
+    GamesList
+  template( #toolbar ) GoT
+  template
+    router-view
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
-  name: 'GamesPage'
+import AppLayout from '@/components/AppLayout.vue'
+import GamesList from '@/components/GamesList.vue'
 
+export default Vue.extend({
+  name: 'GamesPage',
+
+  components: {
+    AppLayout,
+    GamesList
+  }
 })
 </script>

@@ -7,8 +7,8 @@ v-data-table(
   hide-default-footer
   )
   template( #item.house="{ item }")
-        v-avatar
-          img( :src="item.house.path()" )
+    v-avatar
+      img( :src="item.house.path()" )
   template( #item.user_id="{ item }" )
    div( :class="$style.user" v-if="item.user" ) {{ item.user.label }}
   template( #item.score="{ item }" )

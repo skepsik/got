@@ -3,7 +3,7 @@
     v-list-item(v-for="item in users" :key="item.id" link :to="{ name: 'PlayerId', params: { id: item.id } }")
       v-list-item-content
         v-list-item-title {{ item.label }}
-        v-list-item-subtitle игр: {{ item.totalGames }}
+        v-list-item-subtitle Всего игр: {{ item.totalGames }}
 </template>
 
 <script lang="ts">

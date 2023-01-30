@@ -4,7 +4,7 @@ import { Result } from './Result'
 export class User extends Model {
   static entity = 'users'
 
-  static readonly VASSAL = '__vassal__'
+  static readonly VASSAL = null
 
   static fields () {
     return {

@@ -10,7 +10,7 @@ export class Result extends Model {
   static fields () {
     return {
       id: this.uid(),
-      user_id: this.string(null).nullable(),
+      user_id: this.string('').nullable(),
       user: this.belongsTo(User, 'user_id'),
       game_id: this.string(null).nullable(),
       game: this.belongsTo(Game, 'game_id'),

@@ -62,7 +62,7 @@ v-dialog(
           v-spacer
           v-col( cols="6" )
             //- div {{ game.type }}
-            v-radio-group( v-model="game.type" )
+            v-radio-group( v-model="game.type_id" )
               v-row
                 v-col(
                   v-for="type in gameTypes"
@@ -87,6 +87,7 @@ v-dialog(
                   itemValue="id"
                   itemText="label"
                   label="Игрок"
+                  clearable
                   )
               v-col
                 v-text-field( v-model="item.score" :disabled="item.isVassal()" :rules="[rules.required(item.isVassal()), rules.score(item.isVassal())]" label="Очки" )
@@ -140,7 +141,7 @@ export default Vue.extend({
       return GameType.all()
     },
     gameType (): GameType | null {
-      return GameType.query().with('houses').whereId(this.game.type).first()
+      return GameType.query().with('houses').whereId(this.game.type_id).first()
     },
     houses (): House[] {
       return House.all()
@@ -160,12 +161,6 @@ export default Vue.extend({
     validate (): boolean {
       return (this.$refs?.form as HTMLFormElement).validate()
     },
-    reset () {
-      (this.$refs?.form as HTMLFormElement).reset()
-    },
-    resetValidation () {
-      (this.$refs?.form as HTMLFormElement).resetValidation()
-    },
     async saveRecords () {
       await Game.insertOrUpdate({
         data: {
@@ -178,7 +173,6 @@ export default Vue.extend({
       // if (this.validate()) {
       await this.saveRecords()
       this.game = new Game()
-      this.reset()
       // }
     }
   },

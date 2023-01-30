@@ -1,5 +1,5 @@
 <template lang="pug">
-.d-flex.flex-column.flex-grow-1
+.d-flex.flex-column.flex-grow-1( :class="$style.list" )
   v-list.grow
     v-list-item(v-for="item in games" :key="item.id" link :to="{ name: 'GameId', params: { id: item.id } }")
       v-list-item-title {{ item.date() }}
@@ -34,3 +34,9 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="stylus" module>
+.list
+  max-width 300px
+  flex: 0 0 300px
+</style>
