@@ -44,7 +44,8 @@ export default Vue.extend({
         width: '12%',
         align: 'center'
       }, {
-        value: 'user_id'
+        value: 'user_id',
+        width: 220
       }, {
         value: 'score',
         text: 'Очки',

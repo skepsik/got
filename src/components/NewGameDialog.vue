@@ -161,6 +161,12 @@ export default Vue.extend({
     validate (): boolean {
       return (this.$refs?.form as HTMLFormElement).validate()
     },
+    resetHouses () {
+      const houses = this.gameType?.houses
+      if (houses) {
+        this.results = houses.map(({ id }) => new Result({ house_id: id, game_id: this.game.id }))
+      }
+    },
     async saveRecords () {
       await Game.insertOrUpdate({
         data: {
@@ -173,6 +179,8 @@ export default Vue.extend({
       // if (this.validate()) {
       await this.saveRecords()
       this.game = new Game()
+      this.resetHouses()
+      this.dialog = false
       // }
     }
   },
@@ -180,10 +188,7 @@ export default Vue.extend({
     'game.type': {
       immediate: true,
       handler () {
-        const houses = this.gameType?.houses
-        if (houses) {
-          this.results = houses.map(({ id }) => new Result({ house_id: id, game_id: this.game.id }))
-        }
+        this.resetHouses()
       }
     }
   }

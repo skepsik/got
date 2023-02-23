@@ -24,7 +24,7 @@ export default Vue.extend({
   }),
   computed: {
     games () {
-      return Game.query().orderBy('date').get()
+      return Game.query().orderBy('played_at').get()
     }
   },
   methods: {
