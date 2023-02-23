@@ -1,6 +1,6 @@
 export const games = [
   {
-    played_at: 1674410400000,
+    played_at: 1674237600000,
     type_id: 'mother_of_dragons',
     results: [
       {
@@ -9,9 +9,7 @@ export const games = [
         landings: 8,
         supply: 4,
         throne: 8,
-        user: {
-          telegram: 'tiuskiy'
-        }
+        user_id: 'tiuskiy'
       },
       {
         house: 'lannister',
@@ -19,11 +17,7 @@ export const games = [
         landings: 7,
         supply: 2,
         throne: 3,
-        user: {
-          id: 'skepsik',
-          telegram: 'skepsik',
-          phone: '+77076779024'
-        }
+        user_id: 'skepsik'
       },
       {
         house: 'martell',
@@ -38,10 +32,7 @@ export const games = [
         landings: 5,
         supply: 2,
         throne: 2,
-        user: {
-          id: 'PomPom_Marina',
-          telegram: 'PomPom_Marina'
-        }
+        user_id: 'pompom_marina'
       },
       {
         house: 'arren',
@@ -49,9 +40,7 @@ export const games = [
         landings: 5,
         supply: 2,
         throne: 6,
-        user: {
-          name: 'Egor Savvin'
-        }
+        user_id: 'savvin'
       },
       {
         house: 'stark',
@@ -59,9 +48,7 @@ export const games = [
         landings: 4,
         supply: 1,
         throne: 1,
-        user: {
-          telegram: 'shudanian'
-        }
+        user_id: 'shudanian'
       },
       {
         house: 'grayjoy',
@@ -76,10 +63,7 @@ export const games = [
         landings: 1,
         supply: 2,
         throne: 7,
-        user: {
-          id: 'kylikov_nikita',
-          telegram: 'kylikov_nikita'
-        }
+        user_id: 'kylikov_nikita'
       }
     ]
   },
@@ -109,10 +93,7 @@ export const games = [
         landings: 8,
         supply: 2,
         throne: 6,
-        user: {
-          id: 'shunyata10',
-          telegram: 'shunyata10'
-        }
+        user_id: 'shunyata10'
       },
       {
         house: 'barateon',
@@ -120,10 +101,7 @@ export const games = [
         landings: 5,
         supply: 4,
         throne: 3,
-        user: {
-          id: 'dmitriy_ablitsev',
-          telegram: 'dmitriy_ablitsev'
-        }
+        user_id: 'dmitriy_ablitsev'
       },
       {
         house: 'lannister',
@@ -131,7 +109,7 @@ export const games = [
         landings: 4,
         supply: 2,
         throne: 2,
-        user_id: 'PomPom_Marina'
+        user_id: 'pompom_marina'
       },
       {
         house: 'grayjoy',
@@ -139,10 +117,7 @@ export const games = [
         landings: 3,
         supply: 2,
         throne: 4,
-        user: {
-          id: 'Talon_Narn',
-          telegram: 'Talon_Narn'
-        }
+        user_id: 'talon_narn'
       }
     ]
   },
@@ -180,7 +155,7 @@ export const games = [
         landings: 4,
         supply: 1,
         throne: 6,
-        user_id: 'Talon_Narn'
+        user_id: 'talon_narn'
       },
       {
         house: 'martell',
@@ -196,7 +171,222 @@ export const games = [
         landings: 7,
         supply: 5,
         throne: 5,
-        user_id: 'PomPom_Marina'
+        user_id: 'pompom_marina'
+      }
+    ]
+  },
+  {
+    played_at: 1676484000000,
+    type_id: 'mother_of_dragons_a',
+    results: [
+      {
+        house: 'grayjoy',
+        score: 1,
+        landings: 2,
+        supply: 4,
+        throne: 1,
+        user_id: 'savvin'
+      },
+      {
+        house: 'stark',
+        score: 5,
+        landings: 5,
+        supply: 1,
+        throne: 2,
+        user_id: '.'
+      },
+      {
+        house: 'lannister',
+        score: 3,
+        landings: 4,
+        supply: 3,
+        throne: 6,
+        user_id: 'eldar'
+      },
+      {
+        house: 'barateon',
+        score: 2,
+        landings: 3,
+        supply: 2,
+        throne: 3,
+        user_id: 'ykylasov'
+      },
+      {
+        house: 'martell',
+        score: 4,
+        landings: 8,
+        supply: 2,
+        throne: 4,
+        user_id: 'skepsik'
+      },
+      {
+        house: 'tyrell',
+        score: 1,
+        landings: 3,
+        supply: 3,
+        throne: 5,
+        user_id: 'vito5885'
+      },
+      {
+        house: 'arren',
+        score: 5,
+        landings: 9,
+        supply: 5,
+        throne: 7,
+        user_id: 'ilya_mitt'
+      },
+      {
+        house: 'targarien',
+        score: 7,
+        landings: 5,
+        supply: 6,
+        throne: 8,
+        user_id: 'vit'
+      }
+    ]
+  },
+  {
+    played_at: 1676656800000,
+    type_id: 'classic',
+    results: [
+      {
+        house: 'grayjoy',
+        score: 3,
+        landings: 4,
+        supply: 3,
+        throne: 2,
+        user_id: 'vo_a_e'
+      },
+      {
+        house: 'stark',
+        score: 5,
+        landings: 12,
+        supply: 4,
+        throne: 5,
+        user_id: 'skepsik'
+      },
+      {
+        house: 'lannister',
+        score: 3,
+        landings: 3,
+        supply: 3,
+        throne: 3,
+        user_id: 'vito5885'
+      },
+      {
+        house: 'barateon',
+        score: 2,
+        landings: 6,
+        supply: 5,
+        throne: 6,
+        user_id: 'vit'
+      },
+      {
+        house: 'martell',
+        score: 6,
+        landings: 8,
+        supply: 5,
+        throne: 1,
+        user_id: 'ilya_mitt'
+
+      },
+      {
+        house: 'tyrell',
+        score: 1,
+        landings: 3,
+        supply: 2,
+        throne: 4,
+        user_id: 'informateur'
+      }
+    ]
+  },
+  {
+    played_at: 1676743200000,
+    type_id: 'classic',
+    results: [
+      {
+        house: 'barateon',
+        score: 3,
+        landings: 5,
+        supply: 4,
+        throne: 3,
+        user_id: 'shudanian'
+      },
+      {
+        house: 'lannister',
+        score: 3,
+        landings: 5,
+        supply: 4,
+        throne: 2,
+        user_id: 'dl108'
+      },
+      {
+        house: 'stark',
+        score: 7,
+        landings: 13,
+        supply: 6,
+        throne: 1,
+        user_id: 'skepsik'
+      }
+    ]
+  },
+  {
+    played_at: 1676743200000,
+    type_id: 'mother_of_dragons_b',
+    results: [
+      {
+        house: 'grayjoy',
+        score: 7,
+        landings: 8,
+        supply: 4,
+        throne: 3
+      },
+      {
+        house: 'stark',
+        score: 3,
+        landings: 6,
+        supply: 2,
+        throne: 1,
+        user_id: 'koba'
+      },
+      {
+        house: 'lannister',
+        score: 0,
+        landings: 0,
+        supply: 4,
+        throne: 7,
+        user_id: 'shudanian'
+      },
+      {
+        house: 'barateon',
+        score: 4,
+        landings: 7,
+        supply: 2,
+        throne: 4,
+        user_id: 'ilya_mitt'
+      },
+      {
+        house: 'martell',
+        score: 4,
+        landings: 4,
+        supply: 2,
+        throne: 2,
+        user_id: 'tiuskiy'
+      },
+      {
+        house: 'tyrell',
+        score: 4,
+        landings: 7,
+        supply: 6,
+        throne: 5
+      },
+      {
+        house: 'targarien',
+        score: 5,
+        landings: 6,
+        supply: 2,
+        throne: 8,
+        user_id: 'skepsik'
       }
     ]
   }

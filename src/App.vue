@@ -41,6 +41,8 @@ import { GameType } from '@/models/GameType'
 
 import HousesList from './components/HousesList.vue'
 import UsersList from './components/UsersList.vue'
+import { User } from './models/User'
+import { users } from './data/users'
 
 export default Vue.extend({
   name: 'App',
@@ -74,6 +76,7 @@ export default Vue.extend({
 
   created () {
     House.insert({ data: houses })
+    User.insert({ data: users })
     GameType.insert({ data: gameTypes })
     Game.insert({ data: games })
   }
