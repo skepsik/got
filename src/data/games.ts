@@ -1,7 +1,7 @@
 export const games = [
   {
     played_at: 1674237600000,
-    type_id: 'mother_of_dragons',
+    type_id: 'mother_of_dragons_a',
     results: [
       {
         house: 'targarien',
@@ -389,5 +389,68 @@ export const games = [
         user_id: 'skepsik'
       }
     ]
+  },
+  {
+    played_at: '1677348000000',
+    type_id: 'mother_of_dragons_b',
+    results: [{
+      user_id: 'ilya_mitt',
+      house_id: 'barateon',
+      score: 7,
+      landings: 10,
+      supply: 3,
+      throne: 1
+    }, {
+      user_id: 'elgraden',
+      house_id: 'lannister',
+      score: 2,
+      landings: 4,
+      supply: 5,
+      throne: 6
+    }, {
+      user_id: 'vito5885',
+      house_id: 'stark',
+      score: 0,
+      landings: 1,
+      supply: 0,
+      throne: 5
+    }, {
+      user_id: 'skepsik',
+      house_id: 'martell',
+      score: 5,
+      landings: 9,
+      supply: 2,
+      throne: 7
+    }, {
+      user_id: 'savvin',
+      house_id: 'grayjoy',
+      score: 5,
+      landings: 7,
+      supply: 5,
+      throne: 3
+    }, {
+      user_id: 'tim',
+      house_id: 'tyrell',
+      score: 3,
+      landings: 7,
+      supply: 5,
+      throne: 2
+    }, {
+      user_id: 'le_roi_des_aigles',
+      game_id: '$uid52',
+      house_id: 'arren',
+      score: 2,
+      landings: 5,
+      supply: 3,
+      throne: 4
+    }, {
+      user_id: '.',
+      house_id: 'targarien',
+      score: 1,
+      landings: 0,
+      supply: 3,
+      throne: 8
+    }]
   }
+
 ]

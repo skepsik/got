@@ -1,6 +1,7 @@
 import { Model } from '@vuex-orm/core'
 import moment from 'moment'
 import { GameType } from './GameType'
+import { House } from './House'
 
 import { Result } from './Result'
 
@@ -28,6 +29,16 @@ export class Game extends Model {
 
   set dateISO (value: string) {
     this.played_at = moment(value).valueOf()
+  }
+
+  housesSet (): Result[] {
+    const gameType = this.gameType()
+    if (!gameType) return []
+    return gameType.houses.map(({ id }) => new Result({ house_id: id, game_id: this.$id }))
+  }
+
+  gameType (): GameType | null {
+    return GameType.query().with('houses').whereId(this.type_id).first()
   }
 
   id!: string

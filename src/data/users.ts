@@ -76,5 +76,17 @@ export const users = [
   {
     id: 'koba',
     telegram: 'Kobazhan'
+  },
+  {
+    id: 'elgraden',
+    telegram: 'Elgraden'
+  },
+  {
+    id: 'le_roi_des_aigles',
+    telegram: 'le_roi_des_aigles'
+  },
+  {
+    id: 'tim',
+    name: 'Тим'
   }
 ]

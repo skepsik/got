@@ -51,7 +51,8 @@ export default Vue.extend({
     items: [
       { title: 'Партии', icon: 'mdi-view-dashboard', route: { name: 'Games' } },
       { title: 'Игроки', icon: 'mdi-account-circle-outline', route: { name: 'Players' } },
-      { title: 'Дома', icon: 'mdi-castle', route: { name: 'Houses' } }
+      { title: 'Дома', icon: 'mdi-castle', route: { name: 'Houses' } },
+      { title: 'Рандомайзер', icon: 'mdi-castle', route: { name: 'Randomizer' } }
     ]
   }),
 

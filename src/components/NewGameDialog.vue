@@ -185,7 +185,7 @@ export default Vue.extend({
     }
   },
   watch: {
-    'game.type': {
+    'game.type_id': {
       immediate: true,
       handler () {
         this.resetHouses()
