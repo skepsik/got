@@ -16,10 +16,10 @@ export class Result extends Model {
       game: this.belongsTo(Game, 'game_id'),
       house_id: this.string(null).nullable(),
       house: this.belongsTo(House, 'house_id'),
-      score: this.number(null).nullable(),
-      landings: this.number(null).nullable(),
-      supply: this.number(null).nullable(),
-      throne: this.number(null).nullable()
+      score: this.number(0),
+      landings: this.number(0),
+      supply: this.number(0),
+      throne: this.number(0)
     }
   }
 
@@ -34,8 +34,8 @@ export class Result extends Model {
   game!: Game | null
   house_id!: string | null
   house!: House | null
-  score!: number | null
-  landings!: number | null
-  supply!: number | null
-  throne!: number | null
+  score!: number
+  landings!: number
+  supply!: number
+  throne!: number
 }

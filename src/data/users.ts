@@ -88,5 +88,13 @@ export const users = [
   {
     id: 'tim',
     name: 'Тим'
+  },
+  {
+    id: 'larleyt',
+    telegram: 'Larleyt'
+  },
+  {
+    id: 'soulmaster',
+    telegram: 'Soulmaster'
   }
 ]
